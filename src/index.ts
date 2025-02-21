@@ -52,7 +52,7 @@ export default {
 			//'@cf/openai/whisper-large-v3',
 			input
 		);
-		//console.log(response)
+		//console.log(response) 
 
 		const segments = response.segments;
 		let segment_vtt = 'WEBVTT\n\n';
