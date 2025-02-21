@@ -40,11 +40,16 @@ export default {
 		const input = {
 			audio: base64Encode(blob), // Base64
 			language: 'ja', // String
-			initial_prompt: '',
+			//vad_filter: 'true',
+			//without_timestamps: 'true',
+			// やさしい日本語のサンプル文章
+			initial_prompt: '1 日の PM 2.5 の量が、 70 μg / m^2 を超えたときは、外に出ることをできるだけ少なくしましょう。そして、外での長い時間の激しい運動はできるだけ少なくしましょう。病気（呼吸器や循環器）の人、小さな子ども、お年寄りの方は、体調に気をつけましょう。',
+			//initial_prompt: 'You are the best Japanese translator.',
 		};
 
 		let response = await env.AI.run(
 			'@cf/openai/whisper-large-v3-turbo',
+			//'@cf/openai/whisper-large-v3',
 			input
 		);
 		//console.log(response)
